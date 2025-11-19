@@ -4,13 +4,22 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NavbarComponent } from './components/navbar.component/navbar.component';
+
 @NgModule({
   declarations: [
-    App
+    App,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule, 
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
